@@ -1,0 +1,24 @@
+
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!-- Position Column -->
+  <ng-container matColumnDef="nisn">
+    <mat-header-cell *matHeaderCellDef> NISN. </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.nisn}} </mat-cell>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef> NAME </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="study">
+    <mat-header-cell *matHeaderCellDef> STUDY </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.study}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+
